@@ -2,7 +2,9 @@
 title: "About"
 ---
 
-About this site
+About this site:
+
+I am a Biology major at CSUMB in my final year.
 
 ```{r}
 1 + 1
