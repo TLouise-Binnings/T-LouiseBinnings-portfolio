@@ -1,10 +1,18 @@
 ---
-title: "T-LouiseBinnings-portfolio"
+title: "Theresa Louise Binnings"
+about:
+  template: jolla
+  image: T-Binnings-10.jpeg
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/theresa-louise-binnings/
+    - icon: github
+      text: Github
+      href: https://github.com/TLouise-Binnings
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+I am a CSUMB student
 
 ```{r}
 1 + 1
