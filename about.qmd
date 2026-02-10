@@ -6,6 +6,5 @@ About this site:
 
 I am a Biology student at CSUMB with a concentration in Ecology and Evolution, and a passion for Plant Science, Chemistry, and Mathematics. My work with local farm-based food businesses, coupled with social justice farm education lead me back to academia to complete my undergraduate. While in school, I have worked as both a supplementary instructor and teacher's assistant in plant science and chemistry.
 
-```{r}
-1 + 1
+```{}
 ```
