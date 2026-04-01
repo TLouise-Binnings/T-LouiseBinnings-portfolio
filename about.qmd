@@ -2,9 +2,7 @@
 title: "About"
 ---
 
-About this site:
+Hi, I'm Theresa Louise Binnings - a biology student completing my degree in Ecology, Evolution, and Organismal Biology with a minor in Data Science at CSUMB, and a strong foundation in chemistry, mathematics, and writing. My love of plants initially brought me back to school — but my path widened and grew to include the study of chemistry, biology, and mathematics — enabling me to explore working in the classroom as a supplementary instructor and teacher’s assistant for STEM courses.
 
-I am a Biology student at CSUMB with a Concentration in Ecology and Evolution, and a passion for Plant Science, Chemistry, and Mathematics. My work with local farm-based food businesses, coupled with social justice farm education lead me back to academia to complete my undergraduate. While in school, I have worked as both a supplementary instructor and teacher's assistant in plant science and chemistry.
-
-```{}
+```         
 ```
