@@ -12,7 +12,8 @@ about:
       href: https://github.com/TLouise-Binnings
 ---
 
-I am a CSUMB student
+I returned to science seeking to understand our soil and our food.
+Now I'm a STEM student with a love for chemistry, biology, data science, and math — and for the work of creating greater diversity and accessibility throughout STEM.
 
 ```         
 ```
