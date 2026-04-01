@@ -2,7 +2,13 @@
 title: "About"
 ---
 
-Hi, I'm Theresa Louise Binnings - a biology student completing my degree in Ecology, Evolution, and Organismal Biology with a minor in Data Science at CSUMB, and a strong foundation in chemistry, mathematics, and writing. My love of plants initially brought me back to school — but my path widened and grew to include the study of chemistry, biology, and mathematics — enabling me to explore working in the classroom as a supplementary instructor and teacher’s assistant for STEM courses.
+Hi, I'm Theresa Louise Binnings —
+
+I am a biology student completing my degree in Ecology, Evolution, and Organismal Biology with a minor in Data Science, and a strong foundation in chemistry, mathematics, and writing.
+
+Prior to returning to academia, my life centered around the world of local foods and culinary work. I had the privilege of working for several small local food businesses in Santa Cruz — all of which deeply valued sourcing from local farms and creating products that reflected Slow Food values — food made the way people have been making it for centuries. I worked as a baker, a broth maker, and a culinary educator. It was at Pie Ranch, an educational non-profit farm, where my understanding of farms and food expanded to include farm justice and social justice, and where my love for plants and soil deepened.
+
+It was this love of plants and soil that brought me back to school — where my path widened to include chemistry, biology, and mathematics, and eventually into the classroom as a supplementary instructor and teacher's assistant for STEM courses.
 
 ```         
 ```
