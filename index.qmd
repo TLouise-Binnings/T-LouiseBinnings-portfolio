@@ -12,7 +12,7 @@ about:
       href: https://github.com/TLouise-Binnings
 ---
 
-I came to science seeking to understand soil and food.
+I came to science seeking to understand soil and food. 
 
 Now I'm a STEM student with a love for chemistry, biology, data science, and math — and for the work of creating greater diversity and accessibility throughout the world of STEM.
 
