@@ -1,0 +1,225 @@
+field,DegreeLevel,SE_type,ethnicity_race,count
+S&E occupations,bachelors,SE_field,Hispanic or Latino,372000
+S&E occupations,bachelors,SE_field,Other,NA
+S&E occupations,bachelors,SE_field,Asian,636000
+S&E occupations,bachelors,SE_field,Black or African American,219000
+S&E occupations,bachelors,SE_field,Other,11000
+S&E occupations,bachelors,SE_field,White,2810000
+S&E occupations,bachelors,SE_field,Other,109000
+"Biological, agricultural, and other life scientists",bachelors,SE_field,Hispanic or Latino,36000
+"Biological, agricultural, and other life scientists",bachelors,SE_field,Other,1000
+"Biological, agricultural, and other life scientists",bachelors,SE_field,Asian,34000
+"Biological, agricultural, and other life scientists",bachelors,SE_field,Black or African American,10000
+"Biological, agricultural, and other life scientists",bachelors,SE_field,Other,NA
+"Biological, agricultural, and other life scientists",bachelors,SE_field,White,187000
+"Biological, agricultural, and other life scientists",bachelors,SE_field,Other,8000
+Computer and mathematical scientists,bachelors,SE_field,Hispanic or Latino,182000
+Computer and mathematical scientists,bachelors,SE_field,Other,NA
+Computer and mathematical scientists,bachelors,SE_field,Asian,442000
+Computer and mathematical scientists,bachelors,SE_field,Black or African American,144000
+Computer and mathematical scientists,bachelors,SE_field,Other,NA
+Computer and mathematical scientists,bachelors,SE_field,White,1547000
+Computer and mathematical scientists,bachelors,SE_field,Other,69000
+Physical and related scientists,bachelors,SE_field,Hispanic or Latino,15000
+Physical and related scientists,bachelors,SE_field,Other,NA
+Physical and related scientists,bachelors,SE_field,Asian,19000
+Physical and related scientists,bachelors,SE_field,Black or African American,10000
+Physical and related scientists,bachelors,SE_field,Other,NA
+Physical and related scientists,bachelors,SE_field,White,141000
+Physical and related scientists,bachelors,SE_field,Other,4000
+Social and related scientists,bachelors,SE_field,Hispanic or Latino,29000
+Social and related scientists,bachelors,SE_field,Other,NA
+Social and related scientists,bachelors,SE_field,Asian,7000
+Social and related scientists,bachelors,SE_field,Black or African American,6000
+Social and related scientists,bachelors,SE_field,Other,NA
+Social and related scientists,bachelors,SE_field,White,104000
+Social and related scientists,bachelors,SE_field,Other,2000
+Engineers,bachelors,SE_field,Hispanic or Latino,110000
+Engineers,bachelors,SE_field,Other,4000
+Engineers,bachelors,SE_field,Asian,134000
+Engineers,bachelors,SE_field,Black or African American,49000
+Engineers,bachelors,SE_field,Other,NA
+Engineers,bachelors,SE_field,White,830000
+Engineers,bachelors,SE_field,Other,25000
+S&E-related occupations,bachelors,SE_field,Hispanic or Latino,485000
+S&E-related occupations,bachelors,SE_field,Other,11000
+S&E-related occupations,bachelors,SE_field,Asian,534000
+S&E-related occupations,bachelors,SE_field,Black or African American,336000
+S&E-related occupations,bachelors,SE_field,Other,25000
+S&E-related occupations,bachelors,SE_field,White,3298000
+S&E-related occupations,bachelors,SE_field,Other,105000
+Non-S&E occupations,bachelors,SE_field,Hispanic or Latino,2395000
+Non-S&E occupations,bachelors,SE_field,Other,57000
+Non-S&E occupations,bachelors,SE_field,Asian,1522000
+Non-S&E occupations,bachelors,SE_field,Black or African American,1838000
+Non-S&E occupations,bachelors,SE_field,Other,64000
+Non-S&E occupations,bachelors,SE_field,White,15944000
+Non-S&E occupations,bachelors,SE_field,Other,583000
+S&E occupations,masters,SE_field,Hispanic or Latino,136000
+S&E occupations,masters,SE_field,Other,3000
+S&E occupations,masters,SE_field,Asian,650000
+S&E occupations,masters,SE_field,Black or African American,115000
+S&E occupations,masters,SE_field,Other,5000
+S&E occupations,masters,SE_field,White,1340000
+S&E occupations,masters,SE_field,Other,37000
+"Biological, agricultural, and other life scientists",masters,SE_field,Hispanic or Latino,14000
+"Biological, agricultural, and other life scientists",masters,SE_field,Other,NA
+"Biological, agricultural, and other life scientists",masters,SE_field,Asian,31000
+"Biological, agricultural, and other life scientists",masters,SE_field,Black or African American,7000
+"Biological, agricultural, and other life scientists",masters,SE_field,Other,NA
+"Biological, agricultural, and other life scientists",masters,SE_field,White,97000
+"Biological, agricultural, and other life scientists",masters,SE_field,Other,3000
+Computer and mathematical scientists,masters,SE_field,Hispanic or Latino,48000
+Computer and mathematical scientists,masters,SE_field,Other,NA
+Computer and mathematical scientists,masters,SE_field,Asian,440000
+Computer and mathematical scientists,masters,SE_field,Black or African American,60000
+Computer and mathematical scientists,masters,SE_field,Other,NA
+Computer and mathematical scientists,masters,SE_field,White,602000
+Computer and mathematical scientists,masters,SE_field,Other,17000
+Physical and related scientists,masters,SE_field,Hispanic or Latino,6000
+Physical and related scientists,masters,SE_field,Other,NA
+Physical and related scientists,masters,SE_field,Asian,10000
+Physical and related scientists,masters,SE_field,Black or African American,6000
+Physical and related scientists,masters,SE_field,Other,NA
+Physical and related scientists,masters,SE_field,White,71000
+Physical and related scientists,masters,SE_field,Other,2000
+Social and related scientists,masters,SE_field,Hispanic or Latino,26000
+Social and related scientists,masters,SE_field,Other,NA
+Social and related scientists,masters,SE_field,Asian,21000
+Social and related scientists,masters,SE_field,Black or African American,18000
+Social and related scientists,masters,SE_field,Other,NA
+Social and related scientists,masters,SE_field,White,177000
+Social and related scientists,masters,SE_field,Other,6000
+Engineers,masters,SE_field,Hispanic or Latino,42000
+Engineers,masters,SE_field,Other,NA
+Engineers,masters,SE_field,Asian,148000
+Engineers,masters,SE_field,Black or African American,25000
+Engineers,masters,SE_field,Other,2000
+Engineers,masters,SE_field,White,392000
+Engineers,masters,SE_field,Other,10000
+S&E-related occupations,masters,SE_field,Hispanic or Latino,175000
+S&E-related occupations,masters,SE_field,Other,NA
+S&E-related occupations,masters,SE_field,Asian,278000
+S&E-related occupations,masters,SE_field,Black or African American,176000
+S&E-related occupations,masters,SE_field,Other,2000
+S&E-related occupations,masters,SE_field,White,1641000
+S&E-related occupations,masters,SE_field,Other,52000
+Non-S&E occupations,masters,SE_field,Hispanic or Latino,842000
+Non-S&E occupations,masters,SE_field,Other,NA
+Non-S&E occupations,masters,SE_field,Asian,678000
+Non-S&E occupations,masters,SE_field,Black or African American,883000
+Non-S&E occupations,masters,SE_field,Other,17000
+Non-S&E occupations,masters,SE_field,White,6848000
+Non-S&E occupations,masters,SE_field,Other,201000
+S&E occupations,doctorate,SE_field,Hispanic or Latino,49000
+S&E occupations,doctorate,SE_field,Other,1000
+S&E occupations,doctorate,SE_field,Asian,243000
+S&E occupations,doctorate,SE_field,Black or African American,40000
+S&E occupations,doctorate,SE_field,Other,NA
+S&E occupations,doctorate,SE_field,White,596000
+S&E occupations,doctorate,SE_field,Other,10000
+"Biological, agricultural, and other life scientists",doctorate,SE_field,Hispanic or Latino,12000
+"Biological, agricultural, and other life scientists",doctorate,SE_field,Other,NA
+"Biological, agricultural, and other life scientists",doctorate,SE_field,Asian,86000
+"Biological, agricultural, and other life scientists",doctorate,SE_field,Black or African American,5000
+"Biological, agricultural, and other life scientists",doctorate,SE_field,Other,NA
+"Biological, agricultural, and other life scientists",doctorate,SE_field,White,149000
+"Biological, agricultural, and other life scientists",doctorate,SE_field,Other,2000
+Computer and mathematical scientists,doctorate,SE_field,Hispanic or Latino,7000
+Computer and mathematical scientists,doctorate,SE_field,Other,NA
+Computer and mathematical scientists,doctorate,SE_field,Asian,68000
+Computer and mathematical scientists,doctorate,SE_field,Black or African American,8000
+Computer and mathematical scientists,doctorate,SE_field,Other,NA
+Computer and mathematical scientists,doctorate,SE_field,White,105000
+Computer and mathematical scientists,doctorate,SE_field,Other,1000
+Physical and related scientists,doctorate,SE_field,Hispanic or Latino,6000
+Physical and related scientists,doctorate,SE_field,Other,NA
+Physical and related scientists,doctorate,SE_field,Asian,26000
+Physical and related scientists,doctorate,SE_field,Black or African American,2000
+Physical and related scientists,doctorate,SE_field,Other,NA
+Physical and related scientists,doctorate,SE_field,White,86000
+Physical and related scientists,doctorate,SE_field,Other,1000
+Social and related scientists,doctorate,SE_field,Hispanic or Latino,17000
+Social and related scientists,doctorate,SE_field,Other,NA
+Social and related scientists,doctorate,SE_field,Asian,13000
+Social and related scientists,doctorate,SE_field,Black or African American,22000
+Social and related scientists,doctorate,SE_field,Other,NA
+Social and related scientists,doctorate,SE_field,White,177000
+Social and related scientists,doctorate,SE_field,Other,4000
+Engineers,doctorate,SE_field,Hispanic or Latino,6000
+Engineers,doctorate,SE_field,Other,NA
+Engineers,doctorate,SE_field,Asian,49000
+Engineers,doctorate,SE_field,Black or African American,3000
+Engineers,doctorate,SE_field,Other,NA
+Engineers,doctorate,SE_field,White,79000
+Engineers,doctorate,SE_field,Other,2000
+S&E-related occupations,doctorate,SE_field,Hispanic or Latino,35000
+S&E-related occupations,doctorate,SE_field,Other,NA
+S&E-related occupations,doctorate,SE_field,Asian,89000
+S&E-related occupations,doctorate,SE_field,Black or African American,NA
+S&E-related occupations,doctorate,SE_field,Other,NA
+S&E-related occupations,doctorate,SE_field,White,216000
+S&E-related occupations,doctorate,SE_field,Other,12000
+Non-S&E occupations,doctorate,SE_field,Hispanic or Latino,54000
+Non-S&E occupations,doctorate,SE_field,Other,NA
+Non-S&E occupations,doctorate,SE_field,Asian,92000
+Non-S&E occupations,doctorate,SE_field,Black or African American,85000
+Non-S&E occupations,doctorate,SE_field,Other,NA
+Non-S&E occupations,doctorate,SE_field,White,522000
+Non-S&E occupations,doctorate,SE_field,Other,9000
+S&E occupations,professional,SE_field,Hispanic or Latino,8000
+S&E occupations,professional,SE_field,Other,NA
+S&E occupations,professional,SE_field,Asian,14000
+S&E occupations,professional,SE_field,Black or African American,NA
+S&E occupations,professional,SE_field,Other,NA
+S&E occupations,professional,SE_field,White,38000
+S&E occupations,professional,SE_field,Other,2000
+"Biological, agricultural, and other life scientists",professional,SE_field,Hispanic or Latino,1000
+"Biological, agricultural, and other life scientists",professional,SE_field,Other,NA
+"Biological, agricultural, and other life scientists",professional,SE_field,Asian,7000
+"Biological, agricultural, and other life scientists",professional,SE_field,Black or African American,NA
+"Biological, agricultural, and other life scientists",professional,SE_field,Other,NA
+"Biological, agricultural, and other life scientists",professional,SE_field,White,6000
+"Biological, agricultural, and other life scientists",professional,SE_field,Other,NA
+Computer and mathematical scientists,professional,SE_field,Hispanic or Latino,NA
+Computer and mathematical scientists,professional,SE_field,Other,NA
+Computer and mathematical scientists,professional,SE_field,Asian,NA
+Computer and mathematical scientists,professional,SE_field,Black or African American,NA
+Computer and mathematical scientists,professional,SE_field,Other,NA
+Computer and mathematical scientists,professional,SE_field,White,6000
+Computer and mathematical scientists,professional,SE_field,Other,NA
+Physical and related scientists,professional,SE_field,Hispanic or Latino,NA
+Physical and related scientists,professional,SE_field,Other,NA
+Physical and related scientists,professional,SE_field,Asian,NA
+Physical and related scientists,professional,SE_field,Black or African American,NA
+Physical and related scientists,professional,SE_field,Other,NA
+Physical and related scientists,professional,SE_field,White,NA
+Physical and related scientists,professional,SE_field,Other,NA
+Social and related scientists,professional,SE_field,Hispanic or Latino,5000
+Social and related scientists,professional,SE_field,Other,NA
+Social and related scientists,professional,SE_field,Asian,3000
+Social and related scientists,professional,SE_field,Black or African American,NA
+Social and related scientists,professional,SE_field,Other,NA
+Social and related scientists,professional,SE_field,White,23000
+Social and related scientists,professional,SE_field,Other,NA
+Engineers,professional,SE_field,Hispanic or Latino,NA
+Engineers,professional,SE_field,Other,NA
+Engineers,professional,SE_field,Asian,NA
+Engineers,professional,SE_field,Black or African American,NA
+Engineers,professional,SE_field,Other,NA
+Engineers,professional,SE_field,White,3000
+Engineers,professional,SE_field,Other,NA
+S&E-related occupations,professional,SE_field,Hispanic or Latino,126000
+S&E-related occupations,professional,SE_field,Other,NA
+S&E-related occupations,professional,SE_field,Asian,250000
+S&E-related occupations,professional,SE_field,Black or African American,67000
+S&E-related occupations,professional,SE_field,Other,NA
+S&E-related occupations,professional,SE_field,White,898000
+S&E-related occupations,professional,SE_field,Other,29000
+Non-S&E occupations,professional,SE_field,Hispanic or Latino,126000
+Non-S&E occupations,professional,SE_field,Other,2000
+Non-S&E occupations,professional,SE_field,Asian,75000
+Non-S&E occupations,professional,SE_field,Black or African American,96000
+Non-S&E occupations,professional,SE_field,Other,NA
+Non-S&E occupations,professional,SE_field,White,1119000
+Non-S&E occupations,professional,SE_field,Other,36000

@@ -1,0 +1,262 @@
+---
+title: "Spring 2026 Project"
+author: Theresa Louise Binnings
+format: html
+execute: 
+  echo: false
+  warning: false
+  message: false
+embed-resources: true
+---
+
+
+```{r}
+#| label: load-packages
+#| include: false
+
+library(tidyverse)
+library(readxl)
+library(paletteer)
+```
+
+## Data Description
+
+This data comes from the **National Science Foundation**, specifically the [*National Center for Science and Engineering Statistics*.](https://ncsesdata.nsf.gov/explorer/datatables)  The data tables used were **nsf22310-tab001-005** (showing data from 2019) and **nsf25322-tab001-005** (showing data from 2023) - both titled "Employed scientists and engineers, by sex, major field of highest degree, ethnicity, race, disability status, and type of disability."  
+
+The tables exhibit survey data from 2019 and 2023, capturing the count of individuals in various generalized STEM fields.  The table then looked at the count of individuals categorized by sex (male/female), and then ethnicity/race within these 2 sex categories, and the generalized rows (where no sex was defined).  Additionally the table looks at the count of individuals with disabilities working in these generalized STEM fields.
+
+
+## Data Cleaning
+
+Transformation of this data began by reading in the excel document and skipping the first 15 rows.  This allowed for manual labeling of the columns by skipping the subheading format of the excel document and it cut off the part of the table that looked at generalized counts for race/ethnicity and disabilities without any sex (male/female) delineation.  The table was further cropped to exclude the disability columns since the focus of these questions and visualizations centered on sex and race/ethnicity representation in STEM.  The non-zero count values delineated with "*","D", or "S" were transformed into missing NA values as the data was read in.
+
+The original excel data spread the different race/ethnicity labels across the table into columns.  In order to clean the data, these values were pivoted so that each count could be seen as a distinct row designated by a single "count" column, labelled with the appropriate "race/ethnicity" column associated with each count.  
+
+A "sex" column was added that designated rows associated with each sex; the original data table used a subheading on the first column to indicate the two sections with male/female data.  Extraneous "total count" values that represented summed values of all race/ethnicities for each field were filtered out. 
+
+The column for race/ethnicity was compiled to group the smaller counts into a single "Other" category so that these counts could be seen in the final graphic relative to the larger values associated with "Black or African American", "Asian", "Hispanic or Latino", and "White".   The new "Other" category included count values associated with "American Indian or Alaska Native", "Native Hawaiian or Other Pacific Islander", and "Multiracial" labels for race/ethnicity.
+
+Finally, a proportion column was added and calculated to show the proportion of each race/ethnicity within the two sex categories relative to the total of all counts to showcase how the quantity of men and women of various race/ethnicities are represented in STEM as a whole.  
+
+Additionally a column designating the year for each table was added.  The two tables were joined in order to create the graphic showcasing each bar graph next to one another.
+
+
+```{r}
+#| label: read-in-and-clean-data
+#| include: false
+#single code chuck data
+
+tbl2019_stemfields_clean <- read_excel("data-raw/nsf22310-tab001-005.xlsx", 
+                                 skip = 15, 
+                                 col_names = c("field", 
+                                               "total", 
+                                               "hisp_lat", 
+                                               "amer_ind_alaskan", 
+                                               "asian", 
+                                               "black_afri_amer", 
+                                               "nat_hawaii_pacific_islander", 
+                                               "white", 
+                                               "multi_race", 
+                                               "a", "b", "c", "d", "e", "f", "g"),
+                                 na = c("D", "N", "*", "S")) |>
+  select("field", "total", "hisp_lat", "amer_ind_alaskan", "asian", "black_afri_amer", "nat_hawaii_pacific_islander", "white", "multi_race") |>
+  pivot_longer(!c(field, total), 
+               names_to = "ethnicity_race", 
+               values_to = "count") |>
+  select(!total) |>
+  slice(-c(57:63)) |>
+  mutate(sex = case_when(
+    row_number() <= 56 ~ "Female",
+    row_number() > 56 & row_number() <= 112 ~ "Male")) |>
+  filter(field != "S&E fields") |>
+    mutate(ethnicity_race = case_when(
+        ethnicity_race == "hisp_lat" ~ "Hispanic or Latino",
+        ethnicity_race == "amer_ind_alaskan" ~ "Other", 
+        ethnicity_race == "asian" ~ "Asian",
+        ethnicity_race == "black_afri_amer" ~ "Black or African American",
+        ethnicity_race == "nat_hawaii_pacific_islander" ~ "Other",
+        ethnicity_race == "white" ~ "White", 
+        ethnicity_race == "multi_race" ~ "Other")) |>  
+  mutate(SE_type = case_when(
+    field == "S&E-related fields" ~ "SE_related_fields",
+    field == "Non-S&E fields" ~ "non_SE_fields",
+    .default = "SE_field")) |>
+  mutate(field = case_when(
+    field == "Biological, agricultural, and environmental life sciences" ~ "Biological, Agricultural, and Environmental Life sciences",
+    field == "S&E-related fields" ~ "Science & Engineering Related fields",
+    field == "Non-S&E fields" ~ "Non-science & Engineering fields",
+    field == "Engineering" ~ "Engineering",
+    field == "Computer and mathematical sciences" ~ "Computer and Mathematical sciences",
+    field == "Social and related sciences" ~ "Social and Related sciences",
+    field == "Physical and related sciences" ~ "Physical and Related sciences")) |>
+  mutate(year = 2019) |>
+  group_by(field) |>
+  mutate(prop_byfield = count/(sum(count, na.rm = TRUE))) |>
+  ungroup() |>
+  group_by(field, sex) |>
+  mutate(prop_bysex = count/(sum(count, na.rm = TRUE))) |>
+  ungroup() |>
+  mutate(prop = count/(sum(count, na.rm = TRUE)))
+  
+
+```
+
+
+```{r}
+#| label: write-clean-2019-data-to-folder
+#| include: false
+
+write_csv(tbl2019_stemfields_clean, file = "data-clean/tbl2019_stemfields_clean.csv")
+```
+
+```{r}
+#| label: single-code-chunk-clean-data-2023
+#| include: false
+
+tbl2023_stemfields_clean <- read_excel("data-raw/nsf25322-tab001-005.xlsx", 
+                                 skip = 15, 
+                                 col_names = c("field", 
+                                               "total", 
+                                               "hisp_lat", 
+                                               "amer_ind_alaskan", 
+                                               "asian", 
+                                               "black_afri_amer", 
+                                               "nat_hawaii_pacific_islander", 
+                                               "white", 
+                                               "multi_race", 
+                                               "a", "b", "c", "d", "e", "f", "g"),
+                                 na = c("D", "N", "*", "S")) |>
+  select("field", "total", "hisp_lat", "amer_ind_alaskan", "asian", "black_afri_amer", "nat_hawaii_pacific_islander", "white", "multi_race") |>
+  pivot_longer(!c(field, total), 
+               names_to = "ethnicity_race", 
+               values_to = "count") |>
+  select(!total) |>
+  slice(-c(57:63)) |>
+  mutate(sex = case_when(
+    row_number() <= 56 ~ "Female",
+    row_number() > 56 & row_number() <= 112 ~ "Male")) |>
+  filter(field != "S&E fields") |>
+  mutate(ethnicity_race = case_when(
+    ethnicity_race == "hisp_lat" ~ "Hispanic or Latino",
+    ethnicity_race == "amer_ind_alaskan" ~ "Other", 
+    ethnicity_race == "asian" ~ "Asian",
+    ethnicity_race == "black_afri_amer" ~ "Black or African American",
+    ethnicity_race == "nat_hawaii_pacific_islander" ~ "Other",
+    ethnicity_race == "white" ~ "White", 
+    ethnicity_race == "multi_race" ~ "Other")) |>  
+  mutate(SE_type = case_when(
+    field == "S&E-related fields" ~ "SE_related_fields",
+    field == "Non-S&E fields" ~ "non_SE_fields",
+    .default = "SE_field")) |>
+  mutate(field = case_when(
+    field == "Biological, agricultural, and environmental life sciences" ~ "Biological, Agricultural, and Environmental Life sciences",
+    field == "S&E-related fields" ~ "Science & Engineering Related fields",
+    field == "Non-S&E fields" ~ "Non-science & Engineering fields",
+    field == "Engineering" ~ "Engineering",
+    field == "Computer and mathematical sciences" ~ "Computer and Mathematical sciences",
+    field == "Social and related sciences" ~ "Social and Related sciences",
+    field == "Physical and related sciences" ~ "Physical and Related sciences")) |>
+  mutate(year = 2023) |>
+  group_by(field) |>
+  mutate(prop_byfield = count/(sum(count, na.rm = TRUE))) |>
+  ungroup() |>
+  group_by(field, sex) |>
+  mutate(prop_bysex = count/(sum(count, na.rm = TRUE))) |>
+  ungroup() |>
+  mutate(prop = count/(sum(count, na.rm = TRUE)))
+  
+
+```
+
+
+
+```{r}
+#| label: write-clean-2023-data-to-folder
+#| include: false
+
+write_csv(tbl2023_stemfields_clean, file = "data-clean/tbl2023_stemfields_clean.csv")
+```
+
+
+
+```{r}
+#| label: circular-column-chart-2023
+
+
+tbl2023_stemfields_clean |> 
+  filter(!is.na(count)) |>
+  ggplot(aes(y = prop,
+             x = fct_relevel(field, c("Engineering",
+                                    "Computer and Mathematical sciences", 
+                                    "Physical and Related sciences", 
+                                    "Social and Related sciences", 
+                                    "Science & Engineering Related fields", 
+                                    "Non-science & Engineering fields",
+                                    "Biological, Agricultural, and Environmental Life sciences")), 
+             fill= fct_relevel(ethnicity_race, c("White", 
+                                                 "Asian",
+                                                 "Hispanic or Latino",
+                                                 "Black or African American", 
+                                                 "Other")))) +
+  geom_col(position = position_stack()) +
+  facet_wrap(~fct_relevel(sex, c("Male", "Female"))) +
+  labs(y = "Field",
+       x = "Proportions",
+       title = "Representation in Science",
+       fill = "") +
+  theme_minimal() +
+  scale_fill_viridis_d(direction = -1, end = 0.97) +
+  theme(panel.spacing = unit(4, "cm"),
+    legend.position = c(1.12, 0.5),
+    plot.margin = unit(c(1, 6, 1, 1), "cm"),
+    axis.title = element_blank(),
+    axis.text.y = element_blank()) + 
+  coord_polar(clip = "off") +
+  ylim(-0.03, 0.25) 
+
+ggsave("circlplot_2023malefemale.png", width = 19, height = 8, units = "in")
+```
+
+
+
+```{r}
+#| include: false
+tbl2019_2023_stemfields_clean <- bind_rows(tbl2019_stemfields_clean, tbl2023_stemfields_clean)
+
+```
+
+
+```{r}
+
+tbl2019_2023_stemfields_clean |> 
+  filter(!is.na(count)) |>
+  ggplot(aes(x = fct_relevel(sex, c("Male", "Female")), y = prop, fill = fct_relevel(ethnicity_race, c("White", 
+                                                 "Asian",
+                                                 "Hispanic or Latino",
+                                                 "Black or African American", 
+                                                 "Other")))) +
+  geom_col() +
+  facet_grid(factor(year) ~ fct_relevel(field, c("Engineering",
+                                    "Computer and Mathematical sciences", 
+                                    "Physical and Related sciences", 
+                                    "Social and Related sciences", 
+                                    "Science & Engineering Related fields", 
+                                    "Non-science & Engineering fields",
+                                    "Biological, Agricultural, and Environmental Life sciences")), 
+             labeller = label_wrap_gen(width = 20), 
+             scales = "fixed") +
+  ylim(0,0.25) +
+  scale_fill_viridis_d(direction = -1, end = 0.97) +
+  theme_minimal() +
+  theme(strip.text.y = element_text(angle = 0, size = 12),
+        axis.title.y = element_text(margin = margin(r = 20))) +
+  labs(
+    title = "2019 vs. 2023 Distribution of Employed Scientists & Engineers by Sex, Race/Ethnicity, and Major Fields",
+    x = "",
+    y = "Proportion (of all Employed Scientists & Engineers of each year)",
+    fill = "")
+
+
+```
+
+

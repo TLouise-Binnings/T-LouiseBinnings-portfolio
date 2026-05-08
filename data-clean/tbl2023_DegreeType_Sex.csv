@@ -1,0 +1,65 @@
+field,DegreeLevel,SE_type,sex,count
+S&E occupations,bachelors,SE_field,female,1312000
+S&E occupations,bachelors,SE_field,male,3740000
+"Biological, agricultural, and other life scientists",bachelors,SE_field,female,156000
+"Biological, agricultural, and other life scientists",bachelors,SE_field,male,158000
+Computer and mathematical scientists,bachelors,SE_field,female,731000
+Computer and mathematical scientists,bachelors,SE_field,male,2258000
+Physical and related scientists,bachelors,SE_field,female,82000
+Physical and related scientists,bachelors,SE_field,male,103000
+Social and related scientists,bachelors,SE_field,female,96000
+Social and related scientists,bachelors,SE_field,male,69000
+Engineers,bachelors,SE_field,female,247000
+Engineers,bachelors,SE_field,male,1153000
+S&E-related occupations,bachelors,SE_field,female,3609000
+S&E-related occupations,bachelors,SE_field,male,2242000
+Non-S&E occupations,bachelors,SE_field,female,12881000
+Non-S&E occupations,bachelors,SE_field,male,10526000
+S&E occupations,masters,SE_field,female,884000
+S&E occupations,masters,SE_field,male,1709000
+"Biological, agricultural, and other life scientists",masters,SE_field,female,118000
+"Biological, agricultural, and other life scientists",masters,SE_field,male,87000
+Computer and mathematical scientists,masters,SE_field,female,426000
+Computer and mathematical scientists,masters,SE_field,male,926000
+Physical and related scientists,masters,SE_field,female,46000
+Physical and related scientists,masters,SE_field,male,71000
+Social and related scientists,masters,SE_field,female,164000
+Social and related scientists,masters,SE_field,male,75000
+Engineers,masters,SE_field,female,130000
+Engineers,masters,SE_field,male,549000
+S&E-related occupations,masters,SE_field,female,1915000
+S&E-related occupations,masters,SE_field,male,1144000
+Non-S&E occupations,masters,SE_field,female,6275000
+Non-S&E occupations,masters,SE_field,male,3793000
+S&E occupations,doctorate,SE_field,female,351000
+S&E occupations,doctorate,SE_field,male,645000
+"Biological, agricultural, and other life scientists",doctorate,SE_field,female,117000
+"Biological, agricultural, and other life scientists",doctorate,SE_field,male,154000
+Computer and mathematical scientists,doctorate,SE_field,female,48000
+Computer and mathematical scientists,doctorate,SE_field,male,163000
+Physical and related scientists,doctorate,SE_field,female,32000
+Physical and related scientists,doctorate,SE_field,male,95000
+Social and related scientists,doctorate,SE_field,female,122000
+Social and related scientists,doctorate,SE_field,male,81000
+Engineers,doctorate,SE_field,female,32000
+Engineers,doctorate,SE_field,male,152000
+S&E-related occupations,doctorate,SE_field,female,305000
+S&E-related occupations,doctorate,SE_field,male,271000
+Non-S&E occupations,doctorate,SE_field,female,429000
+Non-S&E occupations,doctorate,SE_field,male,488000
+S&E occupations,professional,SE_field,female,39000
+S&E occupations,professional,SE_field,male,33000
+"Biological, agricultural, and other life scientists",professional,SE_field,female,13000
+"Biological, agricultural, and other life scientists",professional,SE_field,male,10000
+Computer and mathematical scientists,professional,SE_field,female,NA
+Computer and mathematical scientists,professional,SE_field,male,13000
+Physical and related scientists,professional,SE_field,female,NA
+Physical and related scientists,professional,SE_field,male,NA
+Social and related scientists,professional,SE_field,female,17000
+Social and related scientists,professional,SE_field,male,8000
+Engineers,professional,SE_field,female,NA
+Engineers,professional,SE_field,male,NA
+S&E-related occupations,professional,SE_field,female,839000
+S&E-related occupations,professional,SE_field,male,927000
+Non-S&E occupations,professional,SE_field,female,763000
+Non-S&E occupations,professional,SE_field,male,942000
