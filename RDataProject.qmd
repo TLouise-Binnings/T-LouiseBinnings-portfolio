@@ -31,9 +31,9 @@ The first 15 rows were skipped when reading in the Excel document from NSF; manu
 
 Since these visualizations centered on sex and race/ethnicity representation, columns related to disability representation were dropped.  The original race/ethnicity labels that were spread across column headers were pivoted into a single "race/ethnicity" column with a parallel "count" column so that each count appeared as a distinct row.
 
-A "sex" column was added to designate rows by male or female, eliminating the subheading structure within the first column of the original table. The "total" column was removed (its values no longer aligned with the reformatted "count" and "race/ethnicity" columns).
+A "sex" column was added to designate rows by male or female, eliminating the subheading structure within the first column of the original table. 
 
-The race/ethnicity column compiled the low count categories — "American Indian or Alaska Native", "Native Hawaiian or Other Pacific Islander", and "Multiracial" — into a single "Other" category, allowing these counts to be visible in the final graphic relative to the larger groups of "Black or African American", "Asian", "Hispanic or Latino", and "White".
+The race/ethnicity column compiled categories with low counts — "American Indian or Alaska Native", "Native Hawaiian or Other Pacific Islander", and "Multiracial" — into a single "Other" category, allowing these counts to be visible in the final graphic relative to the larger groups of "Black or African American", "Asian", "Hispanic or Latino", and "White".
 
 Finally, a proportion column was calculated and added to show the proportion of each race/ethnicity within each sex category relative to the total of all counts. A year column was added to each table and the two tables were joined to create the side-by-side bar chart comparison.
 
@@ -100,11 +100,17 @@ tbl2019_stemfields_clean <- read_excel("data-raw/nsf22310-tab001-005.xlsx",
                                                "multi_race", 
                                                "a", "b", "c", "d", "e", "f", "g"),
                                  na = c("D", "N", "*", "S")) |>
-  select("field", "total", "hisp_lat", "amer_ind_alaskan", "asian", "black_afri_amer", "nat_hawaii_pacific_islander", "white", "multi_race") |>
-  pivot_longer(!c(field, total), 
+  select("field", 
+         "hisp_lat", 
+         "amer_ind_alaskan", 
+         "asian", 
+         "black_afri_amer", 
+         "nat_hawaii_pacific_islander", 
+         "white", 
+         "multi_race") |>
+  pivot_longer(!c(field), 
                names_to = "ethnicity_race", 
                values_to = "count") |>
-  select(!total) |>
   slice(-c(57:63)) |>
   mutate(sex = case_when(
     row_number() <= 56 ~ "Female",
@@ -167,11 +173,17 @@ tbl2023_stemfields_clean <- read_excel("data-raw/nsf25322-tab001-005.xlsx",
                                                "multi_race", 
                                                "a", "b", "c", "d", "e", "f", "g"),
                                  na = c("D", "N", "*", "S")) |>
-  select("field", "total", "hisp_lat", "amer_ind_alaskan", "asian", "black_afri_amer", "nat_hawaii_pacific_islander", "white", "multi_race") |>
-  pivot_longer(!c(field, total), 
+  select("field", 
+         "hisp_lat", 
+         "amer_ind_alaskan", 
+         "asian", 
+         "black_afri_amer", 
+         "nat_hawaii_pacific_islander", 
+         "white", 
+         "multi_race") |>
+  pivot_longer(!c(field), 
                names_to = "ethnicity_race", 
                values_to = "count") |>
-  select(!total) |>
   slice(-c(57:63)) |>
   mutate(sex = case_when(
     row_number() <= 56 ~ "Female",
@@ -267,7 +279,7 @@ ggsave("data-viz/circlplot_2023malefemale.png", width = 18, height = 8, units = 
 ```{r}
 #| label: 2019-2023-bind-tables
 #| include: false
-#| 
+
 tbl2019_2023_stemfields_clean <- bind_rows(tbl2019_stemfields_clean, tbl2023_stemfields_clean)
 
 ```
