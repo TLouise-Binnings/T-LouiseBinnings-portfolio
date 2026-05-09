@@ -47,7 +47,7 @@ These two circular bar charts compare the distribution of employed scientists an
 
 These circular charts also highlight that within the underrepresentation of women in science, there is a broader underrepresentation of diverse races and ethnicities across the STEM workforce. Across both charts, White employees make up the majority, with Asian employees representing the next largest group. However, Hispanic or Latino, Black or African American, and other racial and ethnic groups remain significantly underrepresented in both the male and female charts across all fields.
 ```{r}
-#| echo: FALSE
+#| echo: false
 #| fig-alt: "Two circular bar charts representing male (on left) and female (on right). The two circular plots show the proportion overall of employed scientists and engineers in 2023 by race/ethnicity and by generalized fields of study (Engineering, Computer and Mathematical Sciences, Physical and Related Sciences, Social and Related Sciences, Science & Engineering Related Fields, Non-Science & Engineering Fields, and finally Biological, Agricultural, and Environmental Life Sciences). The left chart shows greater proportions of men in science – especially in the fields of Engineering and Computer and Mathematical Sciences. Both graphs clearly show through the color legend high proportions of White men and White women, followed by proportions of Asian, then Hispanic or Latino, and Black or African American, and a category of Other that represents American Indian or Alaska Natives, Native Hawaiian or Other Pacific Islanders, and Multiracial employed men and women.."
 
 
@@ -60,7 +60,7 @@ knitr::include_graphics("data-viz/circlplot_2023malefemale.png")
 These two barplots show how the proportion of men and women in major STEM fields and the representation within the broad race/ethnicity categories has changed from 2019 to 2023.  While slight shifts can be seen between the two barcharts, the graph shows the continued dominance of male representation as well as white racial dominance in these fields.  
 
 ```{r}
-#| echo: FALSE
+#| echo: false
 #| fig-alt: "Two barplots stacked on top of each other representing the year 2019 and then the year 2023. The plots outline the proportion of distinct race/ethnicities of employed scientists and engineers in generalized fields of study (Engineering, Computer and Mathematical Sciences, Physical and Related Sciences, Social and Related Sciences, Science & Engineering Related Fields, Non-science & Engineering Fields, and finally Biological, Agricultural, and Environmental Life Sciences). The barplots show bars comparing proportion of men and women represented in each field with the stacked proportions showing the distribution of each race/ethnicity withing the groups of women and men in each field."
 
 knitr::include_graphics("data-viz/barplot_2023_2019malefemale.png")
@@ -262,6 +262,7 @@ ggsave("data-viz/circlplot_2023malefemale.png", width = 18, height = 8, units = 
 
 
 ```{r}
+#| label: 2019-2023-barplot-comparison
 #| include: false
 tbl2019_2023_stemfields_clean <- bind_rows(tbl2019_stemfields_clean, tbl2023_stemfields_clean)
 
@@ -269,12 +270,15 @@ tbl2019_2023_stemfields_clean <- bind_rows(tbl2019_stemfields_clean, tbl2023_ste
 
 
 ```{r}
+#| label: 2019-2023-barplot-comparison
 #| include: false
 
 
 tbl2019_2023_stemfields_clean |> 
   filter(!is.na(count)) |>
-  ggplot(aes(x = fct_relevel(sex, c("Male", "Female")), y = prop, fill = fct_relevel(ethnicity_race, c("White", 
+  ggplot(aes(x = fct_relevel(sex, c("Male", "Female")), 
+             y = prop, 
+             fill = fct_relevel(ethnicity_race, c("White", 
                                                  "Asian",
                                                  "Hispanic or Latino",
                                                  "Black or African American", 
