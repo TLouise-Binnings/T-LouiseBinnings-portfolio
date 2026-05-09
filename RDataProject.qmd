@@ -16,7 +16,7 @@ execute:
 
 library(tidyverse)
 library(readxl)
-library(paletteer)
+
 ```
 
 ## Data Description
