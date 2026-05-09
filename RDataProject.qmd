@@ -69,6 +69,8 @@ knitr::include_graphics("data-viz/barplot_2023_2019malefemale.png")
 When one begins to look at the history of science deeper and recognize the advancements that have come as women entered the arena of science,  it becomes clear that science advances dramatically with the incorporation of diverse backgrounds and perspectives.  These charts showcase how we must still work to create diverse scientific arenas to continue to foster greater scientific exploration, advancement and equity for all beings and spaces.
 
 ```{r}
+#| include: false 
+
 #Questions to investigate: 
 
 #How do the number of men and women in major STEM fields (BIO, COMPUTER SCI, PHYSICAL, SOCIAL, ENGINEER, etc.) compare to one another?
