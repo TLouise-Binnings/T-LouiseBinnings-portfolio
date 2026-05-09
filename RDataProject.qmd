@@ -2,11 +2,11 @@
 title: "Spring 2026 Project"
 author: Theresa Louise Binnings
 format: html
+embed-resources: true
 execute: 
   echo: false
   warning: false
   message: false
-embed-resources: true
 ---
 
 
