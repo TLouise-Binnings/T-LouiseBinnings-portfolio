@@ -41,6 +41,44 @@ Finally, a proportion column was added and calculated to show the proportion of 
 Additionally a column designating the year for each table was added.  The two tables were joined in order to create the graphic showcasing each bar graph next to one another.
 
 
+## Data Visualization 1
+
+These two circular bar charts compare the distribution of employed scientists and engineers in 2023 by sex, field of study, and race/ethnicity. The contrast between the larger male chart on the left and the smaller female chart on the right immediately reflects the broader imbalance between men and women in STEM fields. Engineering and Computer and Mathematical Sciences show the most dramatic difference, with both fields having a greater number of employed individuals overall and those individuals being predominantly men.
+
+These circular charts also highlight that within the underrepresentation of women in science, there is a broader underrepresentation of diverse races and ethnicities across the STEM workforce. Across both charts, White employees make up the majority, with Asian employees representing the next largest group. However, Hispanic or Latino, Black or African American, and other racial and ethnic groups remain significantly underrepresented in both the male and female charts across all fields.
+```{r}
+#| echo: FALSE
+#| fig-alt: "Two circular bar charts representing male (on left) and female (on right). The two circular plots show the proportion overall of employed scientists and engineers in 2023 by race/ethnicity and by generalized fields of study (Engineering, Computer and Mathematical Sciences, Physical and Related Sciences, Social and Related Sciences, Science & Engineering Related Fields, Non-Science & Engineering Fields, and finally Biological, Agricultural, and Environmental Life Sciences). The left chart shows greater proportions of men in science – especially in the fields of Engineering and Computer and Mathematical Sciences. Both graphs clearly show through the color legend high proportions of White men and White women, followed by proportions of Asian, then Hispanic or Latino, and Black or African American, and a category of Other that represents American Indian or Alaska Natives, Native Hawaiian or Other Pacific Islanders, and Multiracial employed men and women.."
+
+
+knitr::include_graphics("data-viz/circlplot_2023malefemale.png")
+```
+
+## Data Visualization 2
+
+
+These two barplots show how the proportion of men and women in major STEM fields and the representation within the broad race/ethnicity categories has changed from 2019 to 2023.  While slight shifts can be seen between the two barcharts, the graph shows the continued dominance of male representation as well as white racial dominance in these fields.  
+
+```{r}
+#| echo: FALSE
+#| fig-alt: "Two barplots stacked on top of each other representing the year 2019 and then the year 2023. The plots outline the proportion of distinct race/ethnicities of employed scientists and engineers in generalized fields of study (Engineering, Computer and Mathematical Sciences, Physical and Related Sciences, Social and Related Sciences, Science & Engineering Related Fields, Non-science & Engineering Fields, and finally Biological, Agricultural, and Environmental Life Sciences). The barplots show bars comparing proportion of men and women represented in each field with the stacked proportions showing the distribution of each race/ethnicity withing the groups of women and men in each field."
+
+knitr::include_graphics("data-viz/barplot_2023_2019malefemale.png")
+```
+
+When one begins to look at the history of science deeper and recognize the advancements that have come as women entered the arena of science,  it becomes clear that science advances dramatically with the incorporation of diverse backgrounds and perspectives.  These charts showcase how we must still work to create diverse scientific arenas to continue to foster greater scientific exploration, advancement and equity for all beings and spaces.
+
+```{r}
+#Questions to investigate: 
+
+#How do the number of men and women in major STEM fields (BIO, COMPUTER SCI, PHYSICAL, SOCIAL, ENGINEER, etc.) compare to one another?
+
+#How do the different race categories compare to one another?
+
+#Have there been any shifts in those proportions between 2019 and 2023?
+```
+
+
 ```{r}
 #| label: read-in-and-clean-data
 #| include: false
@@ -181,7 +219,7 @@ write_csv(tbl2023_stemfields_clean, file = "data-clean/tbl2023_stemfields_clean.
 
 ```{r}
 #| label: circular-column-chart-2023
-
+#| include: false
 
 tbl2023_stemfields_clean |> 
   filter(!is.na(count)) |>
@@ -202,7 +240,7 @@ tbl2023_stemfields_clean |>
   facet_wrap(~fct_relevel(sex, c("Male", "Female"))) +
   labs(y = "Field",
        x = "Proportions",
-       title = "Representation in Science",
+       title = "2023 Proportion of Male and Female Employed Scientists & Engineers by Race/Ethnicity and Major Fields",
        fill = "") +
   theme_minimal() +
   scale_fill_viridis_d(direction = -1, end = 0.97) +
@@ -210,11 +248,15 @@ tbl2023_stemfields_clean |>
     legend.position = c(1.12, 0.5),
     plot.margin = unit(c(1, 6, 1, 1), "cm"),
     axis.title = element_blank(),
-    axis.text.y = element_blank()) + 
+    axis.text.y = element_blank()) +
+  annotate("text", x = 0, y = 0.1, label = "0.10", size = 3, color = "grey50") +
+  annotate("text", x = 0, y = 0.2, label = "0.20", size = 3, color = "grey50") +
+  annotate("text", x = 0, y = 0.15, label = "0.15", size = 3, color = "grey50") +
   coord_polar(clip = "off") +
   ylim(-0.03, 0.25) 
 
-ggsave("circlplot_2023malefemale.png", width = 19, height = 8, units = "in")
+
+ggsave("data-viz/circlplot_2023malefemale.png", width = 18, height = 8, units = "in")
 ```
 
 
@@ -227,6 +269,8 @@ tbl2019_2023_stemfields_clean <- bind_rows(tbl2019_stemfields_clean, tbl2023_ste
 
 
 ```{r}
+#| include: false
+
 
 tbl2019_2023_stemfields_clean |> 
   filter(!is.na(count)) |>
@@ -253,8 +297,10 @@ tbl2019_2023_stemfields_clean |>
   labs(
     title = "2019 vs. 2023 Distribution of Employed Scientists & Engineers by Sex, Race/Ethnicity, and Major Fields",
     x = "",
-    y = "Proportion (of all Employed Scientists & Engineers of each year)",
+    y = "Proportion",
     fill = "")
+
+ggsave("data-viz/barplot_2023_2019malefemale.png", width = 13, height = 8, units = "in")
 
 
 ```
