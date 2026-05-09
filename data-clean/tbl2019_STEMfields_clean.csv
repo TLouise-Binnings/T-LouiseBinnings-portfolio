@@ -1,99 +1,99 @@
 field,ethnicity_race,count,sex,SE_type,year,prop_byfield,prop_bysex,prop
 "Biological, Agricultural, and Environmental Life sciences",Hispanic or Latino,33000,Female,SE_field,2019,0.04700854700854701,0.1,0.004439660971344007
-"Biological, Agricultural, and Environmental Life sciences",Other,NA,Female,SE_field,2019,NA,NA,NA
+"Biological, Agricultural, and Environmental Life sciences",*Other,NA,Female,SE_field,2019,NA,NA,NA
 "Biological, Agricultural, and Environmental Life sciences",Asian,63000,Female,SE_field,2019,0.08974358974358974,0.19090909090909092,0.008475716399838558
 "Biological, Agricultural, and Environmental Life sciences",Black or African American,13000,Female,SE_field,2019,0.018518518518518517,0.03939393939393939,0.001748957352347639
-"Biological, Agricultural, and Environmental Life sciences",Other,NA,Female,SE_field,2019,NA,NA,NA
+"Biological, Agricultural, and Environmental Life sciences",*Other,NA,Female,SE_field,2019,NA,NA,NA
 "Biological, Agricultural, and Environmental Life sciences",White,215000,Female,SE_field,2019,0.30626780626780625,0.6515151515151515,0.02892506390421095
-"Biological, Agricultural, and Environmental Life sciences",Other,6000,Female,SE_field,2019,0.008547008547008548,0.01818181818181818,8.072110856989103e-4
+"Biological, Agricultural, and Environmental Life sciences",*Other,6000,Female,SE_field,2019,0.008547008547008548,0.01818181818181818,8.072110856989103e-4
 Computer and Mathematical sciences,Hispanic or Latino,16000,Female,SE_field,2019,0.009592326139088728,0.04050632911392405,0.002152562895197094
-Computer and Mathematical sciences,Other,NA,Female,SE_field,2019,NA,NA,NA
+Computer and Mathematical sciences,*Other,NA,Female,SE_field,2019,NA,NA,NA
 Computer and Mathematical sciences,Asian,171000,Female,SE_field,2019,0.10251798561151079,0.43291139240506327,0.023005515942418942
 Computer and Mathematical sciences,Black or African American,28000,Female,SE_field,2019,0.016786570743405275,0.07088607594936709,0.0037669850665949145
-Computer and Mathematical sciences,Other,NA,Female,SE_field,2019,NA,NA,NA
+Computer and Mathematical sciences,*Other,NA,Female,SE_field,2019,NA,NA,NA
 Computer and Mathematical sciences,White,172000,Female,SE_field,2019,0.10311750599520383,0.43544303797468353,0.02314005112336876
-Computer and Mathematical sciences,Other,8000,Female,SE_field,2019,0.004796163069544364,0.020253164556962026,0.001076281447598547
+Computer and Mathematical sciences,*Other,8000,Female,SE_field,2019,0.004796163069544364,0.020253164556962026,0.001076281447598547
 Physical and Related sciences,Hispanic or Latino,9000,Female,SE_field,2019,0.021479713603818614,0.08181818181818182,0.0012108166285483655
-Physical and Related sciences,Other,NA,Female,SE_field,2019,NA,NA,NA
+Physical and Related sciences,*Other,NA,Female,SE_field,2019,NA,NA,NA
 Physical and Related sciences,Asian,22000,Female,SE_field,2019,0.05250596658711217,0.2,0.0029597739808960044
 Physical and Related sciences,Black or African American,4000,Female,SE_field,2019,0.00954653937947494,0.03636363636363636,5.381407237992735e-4
-Physical and Related sciences,Other,NA,Female,SE_field,2019,NA,NA,NA
+Physical and Related sciences,*Other,NA,Female,SE_field,2019,NA,NA,NA
 Physical and Related sciences,White,75000,Female,SE_field,2019,0.17899761336515513,0.6818181818181818,0.010090138571236378
-Physical and Related sciences,Other,NA,Female,SE_field,2019,NA,NA,NA
+Physical and Related sciences,*Other,NA,Female,SE_field,2019,NA,NA,NA
 Social and Related sciences,Hispanic or Latino,52000,Female,SE_field,2019,0.06914893617021277,0.1319796954314721,0.006995829409390556
-Social and Related sciences,Other,1000,Female,SE_field,2019,0.0013297872340425532,0.0025380710659898475,1.345351809498184e-4
+Social and Related sciences,*Other,1000,Female,SE_field,2019,0.0013297872340425532,0.0025380710659898475,1.345351809498184e-4
 Social and Related sciences,Asian,37000,Female,SE_field,2019,0.04920212765957447,0.09390862944162437,0.00497780169514328
 Social and Related sciences,Black or African American,20000,Female,SE_field,2019,0.026595744680851064,0.050761421319796954,0.0026907036189963676
-Social and Related sciences,Other,NA,Female,SE_field,2019,NA,NA,NA
+Social and Related sciences,*Other,NA,Female,SE_field,2019,NA,NA,NA
 Social and Related sciences,White,275000,Female,SE_field,2019,0.36569148936170215,0.6979695431472082,0.036997174761200055
-Social and Related sciences,Other,9000,Female,SE_field,2019,0.011968085106382979,0.02284263959390863,0.0012108166285483655
+Social and Related sciences,*Other,9000,Female,SE_field,2019,0.011968085106382979,0.02284263959390863,0.0012108166285483655
 Engineering,Hispanic or Latino,38000,Female,SE_field,2019,0.017625231910946195,0.10614525139664804,0.0051123368760930986
-Engineering,Other,NA,Female,SE_field,2019,NA,NA,NA
+Engineering,*Other,NA,Female,SE_field,2019,NA,NA,NA
 Engineering,Asian,121000,Female,SE_field,2019,0.05612244897959184,0.33798882681564246,0.016278756894928022
 Engineering,Black or African American,12000,Female,SE_field,2019,0.0055658627087198514,0.0335195530726257,0.0016144221713978205
-Engineering,Other,NA,Female,SE_field,2019,NA,NA,NA
+Engineering,*Other,NA,Female,SE_field,2019,NA,NA,NA
 Engineering,White,181000,Female,SE_field,2019,0.0839517625231911,0.505586592178771,0.024350867751917128
-Engineering,Other,6000,Female,SE_field,2019,0.0027829313543599257,0.01675977653631285,8.072110856989103e-4
+Engineering,*Other,6000,Female,SE_field,2019,0.0027829313543599257,0.01675977653631285,8.072110856989103e-4
 Science & Engineering Related fields,Hispanic or Latino,12000,Female,SE_related_fields,2019,0.02830188679245283,0.07792207792207792,0.0016144221713978205
-Science & Engineering Related fields,Other,NA,Female,SE_related_fields,2019,NA,NA,NA
+Science & Engineering Related fields,*Other,NA,Female,SE_related_fields,2019,NA,NA,NA
 Science & Engineering Related fields,Asian,35000,Female,SE_related_fields,2019,0.08254716981132075,0.22727272727272727,0.0047087313332436435
 Science & Engineering Related fields,Black or African American,10000,Female,SE_related_fields,2019,0.02358490566037736,0.06493506493506493,0.0013453518094981838
-Science & Engineering Related fields,Other,NA,Female,SE_related_fields,2019,NA,NA,NA
+Science & Engineering Related fields,*Other,NA,Female,SE_related_fields,2019,NA,NA,NA
 Science & Engineering Related fields,White,92000,Female,SE_related_fields,2019,0.2169811320754717,0.5974025974025974,0.012377236647383291
-Science & Engineering Related fields,Other,5000,Female,SE_related_fields,2019,0.01179245283018868,0.032467532467532464,6.726759047490919e-4
+Science & Engineering Related fields,*Other,5000,Female,SE_related_fields,2019,0.01179245283018868,0.032467532467532464,6.726759047490919e-4
 Non-science & Engineering fields,Hispanic or Latino,22000,Female,non_SE_fields,2019,0.01676829268292683,0.049773755656108594,0.0029597739808960044
-Non-science & Engineering fields,Other,NA,Female,non_SE_fields,2019,NA,NA,NA
+Non-science & Engineering fields,*Other,NA,Female,non_SE_fields,2019,NA,NA,NA
 Non-science & Engineering fields,Asian,40000,Female,non_SE_fields,2019,0.03048780487804878,0.09049773755656108,0.005381407237992735
 Non-science & Engineering fields,Black or African American,48000,Female,non_SE_fields,2019,0.036585365853658534,0.1085972850678733,0.006457688685591282
-Non-science & Engineering fields,Other,NA,Female,non_SE_fields,2019,NA,NA,NA
+Non-science & Engineering fields,*Other,NA,Female,non_SE_fields,2019,NA,NA,NA
 Non-science & Engineering fields,White,312000,Female,non_SE_fields,2019,0.23780487804878048,0.7058823529411765,0.041974976456343335
-Non-science & Engineering fields,Other,20000,Female,non_SE_fields,2019,0.01524390243902439,0.04524886877828054,0.0026907036189963676
+Non-science & Engineering fields,*Other,20000,Female,non_SE_fields,2019,0.01524390243902439,0.04524886877828054,0.0026907036189963676
 "Biological, Agricultural, and Environmental Life sciences",Hispanic or Latino,35000,Male,SE_field,2019,0.04985754985754986,0.09408602150537634,0.0047087313332436435
-"Biological, Agricultural, and Environmental Life sciences",Other,NA,Male,SE_field,2019,NA,NA,NA
+"Biological, Agricultural, and Environmental Life sciences",*Other,NA,Male,SE_field,2019,NA,NA,NA
 "Biological, Agricultural, and Environmental Life sciences",Asian,68000,Male,SE_field,2019,0.09686609686609686,0.1827956989247312,0.00914839230458765
 "Biological, Agricultural, and Environmental Life sciences",Black or African American,10000,Male,SE_field,2019,0.014245014245014245,0.026881720430107527,0.0013453518094981838
-"Biological, Agricultural, and Environmental Life sciences",Other,NA,Male,SE_field,2019,NA,NA,NA
+"Biological, Agricultural, and Environmental Life sciences",*Other,NA,Male,SE_field,2019,NA,NA,NA
 "Biological, Agricultural, and Environmental Life sciences",White,252000,Male,SE_field,2019,0.358974358974359,0.6774193548387096,0.03390286559935423
-"Biological, Agricultural, and Environmental Life sciences",Other,7000,Male,SE_field,2019,0.009971509971509971,0.01881720430107527,9.417462666487286e-4
+"Biological, Agricultural, and Environmental Life sciences",*Other,7000,Male,SE_field,2019,0.009971509971509971,0.01881720430107527,9.417462666487286e-4
 Computer and Mathematical sciences,Hispanic or Latino,84000,Male,SE_field,2019,0.050359712230215826,0.06598586017282011,0.011300955199784744
-Computer and Mathematical sciences,Other,NA,Male,SE_field,2019,NA,NA,NA
+Computer and Mathematical sciences,*Other,NA,Male,SE_field,2019,NA,NA,NA
 Computer and Mathematical sciences,Asian,306000,Male,SE_field,2019,0.18345323741007194,0.2403770620581304,0.04116776537064443
 Computer and Mathematical sciences,Black or African American,79000,Male,SE_field,2019,0.047362110311750596,0.062058130400628436,0.010628279295035651
-Computer and Mathematical sciences,Other,NA,Male,SE_field,2019,NA,NA,NA
+Computer and Mathematical sciences,*Other,NA,Male,SE_field,2019,NA,NA,NA
 Computer and Mathematical sciences,White,771000,Male,SE_field,2019,0.46223021582733814,0.605655930871956,0.10372662451230998
-Computer and Mathematical sciences,Other,33000,Male,SE_field,2019,0.019784172661870502,0.025923016496465043,0.004439660971344007
+Computer and Mathematical sciences,*Other,33000,Male,SE_field,2019,0.019784172661870502,0.025923016496465043,0.004439660971344007
 Physical and Related sciences,Hispanic or Latino,15000,Male,SE_field,2019,0.03579952267303103,0.04854368932038835,0.002018027714247276
-Physical and Related sciences,Other,NA,Male,SE_field,2019,NA,NA,NA
+Physical and Related sciences,*Other,NA,Male,SE_field,2019,NA,NA,NA
 Physical and Related sciences,Asian,66000,Male,SE_field,2019,0.1575178997613365,0.21359223300970873,0.008879321942688014
 Physical and Related sciences,Black or African American,9000,Male,SE_field,2019,0.021479713603818614,0.02912621359223301,0.0012108166285483655
-Physical and Related sciences,Other,NA,Male,SE_field,2019,NA,NA,NA
+Physical and Related sciences,*Other,NA,Male,SE_field,2019,NA,NA,NA
 Physical and Related sciences,White,215000,Male,SE_field,2019,0.513126491646778,0.6957928802588996,0.02892506390421095
-Physical and Related sciences,Other,4000,Male,SE_field,2019,0.00954653937947494,0.012944983818770227,5.381407237992735e-4
+Physical and Related sciences,*Other,4000,Male,SE_field,2019,0.00954653937947494,0.012944983818770227,5.381407237992735e-4
 Social and Related sciences,Hispanic or Latino,33000,Male,SE_field,2019,0.043882978723404256,0.09217877094972067,0.004439660971344007
-Social and Related sciences,Other,NA,Male,SE_field,2019,NA,NA,NA
+Social and Related sciences,*Other,NA,Male,SE_field,2019,NA,NA,NA
 Social and Related sciences,Asian,18000,Male,SE_field,2019,0.023936170212765957,0.05027932960893855,0.002421633257096731
 Social and Related sciences,Black or African American,19000,Male,SE_field,2019,0.02526595744680851,0.05307262569832402,0.0025561684380465493
-Social and Related sciences,Other,NA,Male,SE_field,2019,NA,NA,NA
+Social and Related sciences,*Other,NA,Male,SE_field,2019,NA,NA,NA
 Social and Related sciences,White,281000,Male,SE_field,2019,0.37367021276595747,0.7849162011173184,0.037804385846898964
-Social and Related sciences,Other,7000,Male,SE_field,2019,0.009308510638297872,0.019553072625698324,9.417462666487286e-4
+Social and Related sciences,*Other,7000,Male,SE_field,2019,0.009308510638297872,0.019553072625698324,9.417462666487286e-4
 Engineering,Hispanic or Latino,138000,Male,SE_field,2019,0.0640074211502783,0.07675194660734148,0.018565854971074935
-Engineering,Other,3000,Male,SE_field,2019,0.0013914656771799629,0.0016685205784204673,4.0360554284945513e-4
+Engineering,*Other,3000,Male,SE_field,2019,0.0013914656771799629,0.0016685205784204673,4.0360554284945513e-4
 Engineering,Asian,454000,Male,SE_field,2019,0.21057513914656772,0.2525027808676307,0.06107897215121754
 Engineering,Black or African American,66000,Male,SE_field,2019,0.030612244897959183,0.03670745272525028,0.008879321942688014
-Engineering,Other,7000,Male,SE_field,2019,0.003246753246753247,0.00389321468298109,9.417462666487286e-4
+Engineering,*Other,7000,Male,SE_field,2019,0.003246753246753247,0.00389321468298109,9.417462666487286e-4
 Engineering,White,1099000,Male,SE_field,2019,0.5097402597402597,0.6112347052280311,0.1478541638638504
-Engineering,Other,31000,Male,SE_field,2019,0.01437847866419295,0.017241379310344827,0.00417059060944437
+Engineering,*Other,31000,Male,SE_field,2019,0.01437847866419295,0.017241379310344827,0.00417059060944437
 Science & Engineering Related fields,Hispanic or Latino,15000,Male,SE_related_fields,2019,0.03537735849056604,0.05555555555555555,0.002018027714247276
-Science & Engineering Related fields,Other,NA,Male,SE_related_fields,2019,NA,NA,NA
+Science & Engineering Related fields,*Other,NA,Male,SE_related_fields,2019,NA,NA,NA
 Science & Engineering Related fields,Asian,60000,Male,SE_related_fields,2019,0.14150943396226415,0.2222222222222222,0.008072110856989103
 Science & Engineering Related fields,Black or African American,16000,Male,SE_related_fields,2019,0.03773584905660377,0.05925925925925926,0.002152562895197094
-Science & Engineering Related fields,Other,NA,Male,SE_related_fields,2019,NA,NA,NA
+Science & Engineering Related fields,*Other,NA,Male,SE_related_fields,2019,NA,NA,NA
 Science & Engineering Related fields,White,179000,Male,SE_related_fields,2019,0.4221698113207547,0.662962962962963,0.02408179739001749
-Science & Engineering Related fields,Other,NA,Male,SE_related_fields,2019,NA,NA,NA
+Science & Engineering Related fields,*Other,NA,Male,SE_related_fields,2019,NA,NA,NA
 Non-science & Engineering fields,Hispanic or Latino,62000,Male,non_SE_fields,2019,0.04725609756097561,0.07126436781609195,0.00834118121888874
-Non-science & Engineering fields,Other,NA,Male,non_SE_fields,2019,NA,NA,NA
+Non-science & Engineering fields,*Other,NA,Male,non_SE_fields,2019,NA,NA,NA
 Non-science & Engineering fields,Asian,83000,Male,non_SE_fields,2019,0.06326219512195122,0.09540229885057472,0.011166420018834925
 Non-science & Engineering fields,Black or African American,45000,Male,non_SE_fields,2019,0.03429878048780488,0.05172413793103448,0.006054083142741827
-Non-science & Engineering fields,Other,NA,Male,non_SE_fields,2019,NA,NA,NA
+Non-science & Engineering fields,*Other,NA,Male,non_SE_fields,2019,NA,NA,NA
 Non-science & Engineering fields,White,664000,Male,non_SE_fields,2019,0.5060975609756098,0.7632183908045977,0.0893313601506794
-Non-science & Engineering fields,Other,16000,Male,non_SE_fields,2019,0.012195121951219513,0.01839080459770115,0.002152562895197094
+Non-science & Engineering fields,*Other,16000,Male,non_SE_fields,2019,0.012195121951219513,0.01839080459770115,0.002152562895197094

@@ -29,13 +29,11 @@ The tables contain survey data capturing the count of employed individuals acros
 
 The first 15 rows were skipped when reading in the Excel document from NSF; manual column labels were added.  Skipping these rows bypassed the original row subheading format in the original Excel and excluded the section of data without Male/Female Sex classification.  Non-zero count values marked with "*", "D", or "S" were converted to NA as the data was read in.
 
-Then, columns with data on disability representation were dropped since the focus of these visualizations centered on sex and race/ethnicity representation in STEM.
+Since these visualizations centered on sex and race/ethnicity representation, columns related to disability representation were dropped.  The original race/ethnicity labels that were spread across column headers were pivoted into a single "race/ethnicity" column with a parallel "count" column so that each count appeared as a distinct row.
 
-The original Excel file spread race/ethnicity labels across column headers; these labels were pivoted into a single "race/ethnicity" column with a parallel "count" column so that each count appeared as a distinct row.
+A "sex" column was added to designate rows by male or female, eliminating the subheading structure within the first column of the original table. The "total" column was removed (its values no longer aligned with the reformatted "count" and "race/ethnicity" columns).
 
-A "sex" column was added to designate rows by male or female, eliminating the subheading structure in the original table. "Total" column was removed, as the total values heald correct information for newly designated "count" and "race/ethnicity" rows.
-
-The race/ethnicity column was then compiled to group smaller categories — "American Indian or Alaska Native", "Native Hawaiian or Other Pacific Islander", and "Multiracial" — into a single "Other" category, allowing these counts to be visible in the final graphic relative to the larger groups of "Black or African American", "Asian", "Hispanic or Latino", and "White".
+The race/ethnicity column compiled the low count categories — "American Indian or Alaska Native", "Native Hawaiian or Other Pacific Islander", and "Multiracial" — into a single "Other" category, allowing these counts to be visible in the final graphic relative to the larger groups of "Black or African American", "Asian", "Hispanic or Latino", and "White".
 
 Finally, a proportion column was calculated and added to show the proportion of each race/ethnicity within each sex category relative to the total of all counts. A year column was added to each table and the two tables were joined to create the side-by-side bar chart comparison.
 
@@ -50,7 +48,7 @@ The charts also show a compounding underrepresentation: beyond the gender gap, H
 ```{r}
 #| echo: false
 #| fig-alt: "Two circular bar charts representing male (on left) and female (on right). The two circular plots show the proportion overall of employed scientists and engineers in 2023 by race/ethnicity and by generalized fields of study (Engineering, Computer and Mathematical Sciences, Physical and Related Sciences, Social and Related Sciences, Science & Engineering Related Fields, Non-Science & Engineering Fields, and finally Biological, Agricultural, and Environmental Life Sciences). The left chart shows greater proportions of men in science – especially in the fields of Engineering and Computer and Mathematical Sciences. Both graphs clearly show through the color legend high proportions of White men and White women, followed by proportions of Asian, then Hispanic or Latino, and Black or African American, and a category of Other that represents American Indian or Alaska Natives, Native Hawaiian or Other Pacific Islanders, and Multiracial employed men and women."
-#| fig-cap: "2023 proportion of employed scientists and engineers by race/ethnicity and major field, shown separately by sex. Source: National Science Foundation, National Center for Science and Engineering Statistics (nsf25322-tab001-005)."
+#| fig-cap: "2023 proportion of employed scientists and engineers by race/ethnicity and major field, shown separately by sex. Source: National Science Foundation, National Center for Science and Engineering Statistics (nsf25322-tab001-005). \n **Other** = combined categories of *American Indian or Alaska Native*, *Native Hawaiian or Other Pacific Islander*, and *Multiracial*."
 
 
 knitr::include_graphics("data-viz/circlplot_2023malefemale.png")
@@ -64,7 +62,7 @@ These two bar charts show the change from 2019 to 2023 in the proportion of men 
 ```{r}
 #| echo: false
 #| fig-alt: "Two barplots stacked on top of each other representing the year 2019 and then the year 2023. The plots outline the proportion of distinct race/ethnicities of employed scientists and engineers in generalized fields of study (Engineering, Computer and Mathematical Sciences, Physical and Related Sciences, Social and Related Sciences, Science & Engineering Related Fields, Non-science & Engineering Fields, and finally Biological, Agricultural, and Environmental Life Sciences). The barplots show bars comparing proportion of men and women represented in each field with the stacked proportions showing the distribution of each race/ethnicity withing the groups of women and men in each field."
-#| fig-cap: "2019 vs. 2023 proportion of employed scientists and engineers by sex, race/ethnicity, and major field. Source: National Science Foundation, National Center for Science and Engineering Statistics (nsf22310-tab001-005; nsf25322-tab001-005)."
+#| fig-cap: "2019 vs. 2023 proportion of employed scientists and engineers by sex, race/ethnicity, and major field. Source: National Science Foundation, National Center for Science and Engineering Statistics (nsf22310-tab001-005; nsf25322-tab001-005).  \n **Other** = combined categories of *American Indian or Alaska Native*, *Native Hawaiian or Other Pacific Islander*, and *Multiracial*." 
 
 knitr::include_graphics("data-viz/barplot_2023_2019malefemale.png")
 ```
@@ -114,12 +112,12 @@ tbl2019_stemfields_clean <- read_excel("data-raw/nsf22310-tab001-005.xlsx",
   filter(field != "S&E fields") |>
     mutate(ethnicity_race = case_when(
         ethnicity_race == "hisp_lat" ~ "Hispanic or Latino",
-        ethnicity_race == "amer_ind_alaskan" ~ "Other", 
+        ethnicity_race == "amer_ind_alaskan" ~ "*Other", 
         ethnicity_race == "asian" ~ "Asian",
         ethnicity_race == "black_afri_amer" ~ "Black or African American",
-        ethnicity_race == "nat_hawaii_pacific_islander" ~ "Other",
+        ethnicity_race == "nat_hawaii_pacific_islander" ~ "*Other",
         ethnicity_race == "white" ~ "White", 
-        ethnicity_race == "multi_race" ~ "Other")) |>  
+        ethnicity_race == "multi_race" ~ "*Other")) |>  
   mutate(SE_type = case_when(
     field == "S&E-related fields" ~ "SE_related_fields",
     field == "Non-S&E fields" ~ "non_SE_fields",
@@ -181,12 +179,12 @@ tbl2023_stemfields_clean <- read_excel("data-raw/nsf25322-tab001-005.xlsx",
   filter(field != "S&E fields") |>
   mutate(ethnicity_race = case_when(
     ethnicity_race == "hisp_lat" ~ "Hispanic or Latino",
-    ethnicity_race == "amer_ind_alaskan" ~ "Other", 
+    ethnicity_race == "amer_ind_alaskan" ~ "*Other", 
     ethnicity_race == "asian" ~ "Asian",
     ethnicity_race == "black_afri_amer" ~ "Black or African American",
-    ethnicity_race == "nat_hawaii_pacific_islander" ~ "Other",
+    ethnicity_race == "nat_hawaii_pacific_islander" ~ "*Other",
     ethnicity_race == "white" ~ "White", 
-    ethnicity_race == "multi_race" ~ "Other")) |>  
+    ethnicity_race == "multi_race" ~ "*Other")) |>  
   mutate(SE_type = case_when(
     field == "S&E-related fields" ~ "SE_related_fields",
     field == "Non-S&E fields" ~ "non_SE_fields",
@@ -240,7 +238,7 @@ tbl2023_stemfields_clean |>
                                                  "Asian",
                                                  "Hispanic or Latino",
                                                  "Black or African American", 
-                                                 "Other")))) +
+                                                 "*Other")))) +
   geom_col(position = position_stack()) +
   facet_wrap(~fct_relevel(sex, c("Male", "Female"))) +
   labs(y = "Field",
@@ -288,7 +286,7 @@ tbl2019_2023_stemfields_clean |>
                                                  "Asian",
                                                  "Hispanic or Latino",
                                                  "Black or African American", 
-                                                 "Other")))) +
+                                                 "*Other")))) +
   geom_col() +
   facet_grid(factor(year) ~ fct_relevel(field, c("Engineering",
                                     "Computer and Mathematical sciences", 
