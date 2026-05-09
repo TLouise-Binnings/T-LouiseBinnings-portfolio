@@ -267,8 +267,9 @@ ggsave("data-viz/circlplot_2023malefemale.png", width = 18, height = 8, units = 
 
 
 ```{r}
-#| label: 2019-2023-barplot-comparison
+#| label: 2019-2023-bind-tables
 #| include: false
+#| 
 tbl2019_2023_stemfields_clean <- bind_rows(tbl2019_stemfields_clean, tbl2023_stemfields_clean)
 
 ```
