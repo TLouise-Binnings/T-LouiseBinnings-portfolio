@@ -21,34 +21,36 @@ library(paletteer)
 
 ## Data Description
 
-This data comes from the **National Science Foundation**, specifically the [*National Center for Science and Engineering Statistics*.](https://ncsesdata.nsf.gov/explorer/datatables)  The data tables used were **nsf22310-tab001-005** (showing data from 2019) and **nsf25322-tab001-005** (showing data from 2023) - both titled "Employed scientists and engineers, by sex, major field of highest degree, ethnicity, race, disability status, and type of disability."  
+This data comes from the **National Science Foundation**, specifically the [*National Center for Science and Engineering Statistics*.](https://ncsesdata.nsf.gov/explorer/datatables)  The data tables used were **nsf22310-tab001-005** (2019 survey data) and **nsf25322-tab001-005** (2023 survey data) - both titled "Employed scientists and engineers, by sex, major field of highest degree, ethnicity, race, disability status, and type of disability."  
 
-The tables exhibit survey data from 2019 and 2023, capturing the count of individuals in various generalized STEM fields.  The table then looked at the count of individuals categorized by sex (male/female), and then ethnicity/race within these 2 sex categories, and the generalized rows (where no sex was defined).  Additionally the table looks at the count of individuals with disabilities working in these generalized STEM fields.
-
+The tables contain survey data capturing the count of employed individuals across generalized STEM fields, broken down by sex (male/female), race/ethnicity within each sex category, and disability status.
 
 ## Data Cleaning
 
-Transformation of this data began by reading in the excel document and skipping the first 15 rows.  This allowed for manual labeling of the columns by skipping the subheading format of the excel document and it cut off the part of the table that looked at generalized counts for race/ethnicity and disabilities without any sex (male/female) delineation.  The table was further cropped to exclude the disability columns since the focus of these questions and visualizations centered on sex and race/ethnicity representation in STEM.  The non-zero count values delineated with "*","D", or "S" were transformed into missing NA values as the data was read in.
+The first 15 rows were skipped when reading in the Excel document from NSF; manual column labels were added.  Skipping these rows bypassed the original row subheading format in the original Excel and excluded the section of data without Male/Female Sex classification.  Non-zero count values marked with "*", "D", or "S" were converted to NA as the data was read in.
 
-The original excel data spread the different race/ethnicity labels across the table into columns.  In order to clean the data, these values were pivoted so that each count could be seen as a distinct row designated by a single "count" column, labelled with the appropriate "race/ethnicity" column associated with each count.  
+Then, columns with data on disability representation were dropped since the focus of these visualizations centered on sex and race/ethnicity representation in STEM.
 
-A "sex" column was added that designated rows associated with each sex; the original data table used a subheading on the first column to indicate the two sections with male/female data.  Extraneous "total count" values that represented summed values of all race/ethnicities for each field were filtered out. 
+The original Excel file spread race/ethnicity labels across column headers; these labels were pivoted into a single "race/ethnicity" column with a parallel "count" column so that each count appeared as a distinct row.
 
-The column for race/ethnicity was compiled to group the smaller counts into a single "Other" category so that these counts could be seen in the final graphic relative to the larger values associated with "Black or African American", "Asian", "Hispanic or Latino", and "White".   The new "Other" category included count values associated with "American Indian or Alaska Native", "Native Hawaiian or Other Pacific Islander", and "Multiracial" labels for race/ethnicity.
+A "sex" column was added to designate rows by male or female, eliminating the subheading structure in the original table. "Total" column was removed, as the total values heald correct information for newly designated "count" and "race/ethnicity" rows.
 
-Finally, a proportion column was added and calculated to show the proportion of each race/ethnicity within the two sex categories relative to the total of all counts to showcase how the quantity of men and women of various race/ethnicities are represented in STEM as a whole.  
+The race/ethnicity column was then compiled to group smaller categories — "American Indian or Alaska Native", "Native Hawaiian or Other Pacific Islander", and "Multiracial" — into a single "Other" category, allowing these counts to be visible in the final graphic relative to the larger groups of "Black or African American", "Asian", "Hispanic or Latino", and "White".
 
-Additionally a column designating the year for each table was added.  The two tables were joined in order to create the graphic showcasing each bar graph next to one another.
+Finally, a proportion column was calculated and added to show the proportion of each race/ethnicity within each sex category relative to the total of all counts. A year column was added to each table and the two tables were joined to create the side-by-side bar chart comparison.
 
 
 ## Data Visualization 1
 
-These two circular bar charts compare the distribution of employed scientists and engineers in 2023 by sex, field of study, and race/ethnicity. The contrast between the larger male chart on the left and the smaller female chart on the right immediately reflects the broader imbalance between men and women in STEM fields. Engineering and Computer and Mathematical Sciences show the most dramatic difference, with both fields having a greater number of employed individuals overall and those individuals being predominantly men.
+These two circular bar charts show data from 2023, comparing representation of men (right chart) and women (left).  The contrast of larger reflects the broader imbalance between men and women in STEM. Engineering and Computer and Mathematical Sciences show the most dramatic difference, with both of these fields having a greater number of employed individuals overall and those individuals being predominantly men.
 
-These circular charts also highlight that within the underrepresentation of women in science, there is a broader underrepresentation of diverse races and ethnicities across the STEM workforce. Across both charts, White employees make up the majority, with Asian employees representing the next largest group. However, Hispanic or Latino, Black or African American, and other racial and ethnic groups remain significantly underrepresented in both the male and female charts across all fields.
+The charts also show a compounding underrepresentation: beyond the gender gap, Hispanic or Latino, Black or African American, and other racial and ethnic groups remain significantly underrepresented across all fields in both charts, with White employees making up the majority and Asian employees as the next largest group.
+
+
 ```{r}
 #| echo: false
-#| fig-alt: "Two circular bar charts representing male (on left) and female (on right). The two circular plots show the proportion overall of employed scientists and engineers in 2023 by race/ethnicity and by generalized fields of study (Engineering, Computer and Mathematical Sciences, Physical and Related Sciences, Social and Related Sciences, Science & Engineering Related Fields, Non-Science & Engineering Fields, and finally Biological, Agricultural, and Environmental Life Sciences). The left chart shows greater proportions of men in science – especially in the fields of Engineering and Computer and Mathematical Sciences. Both graphs clearly show through the color legend high proportions of White men and White women, followed by proportions of Asian, then Hispanic or Latino, and Black or African American, and a category of Other that represents American Indian or Alaska Natives, Native Hawaiian or Other Pacific Islanders, and Multiracial employed men and women.."
+#| fig-alt: "Two circular bar charts representing male (on left) and female (on right). The two circular plots show the proportion overall of employed scientists and engineers in 2023 by race/ethnicity and by generalized fields of study (Engineering, Computer and Mathematical Sciences, Physical and Related Sciences, Social and Related Sciences, Science & Engineering Related Fields, Non-Science & Engineering Fields, and finally Biological, Agricultural, and Environmental Life Sciences). The left chart shows greater proportions of men in science – especially in the fields of Engineering and Computer and Mathematical Sciences. Both graphs clearly show through the color legend high proportions of White men and White women, followed by proportions of Asian, then Hispanic or Latino, and Black or African American, and a category of Other that represents American Indian or Alaska Natives, Native Hawaiian or Other Pacific Islanders, and Multiracial employed men and women."
+#| fig-cap: "2023 proportion of employed scientists and engineers by race/ethnicity and major field, shown separately by sex. Source: National Science Foundation, National Center for Science and Engineering Statistics (nsf25322-tab001-005)."
 
 
 knitr::include_graphics("data-viz/circlplot_2023malefemale.png")
@@ -56,17 +58,18 @@ knitr::include_graphics("data-viz/circlplot_2023malefemale.png")
 
 ## Data Visualization 2
 
+These two bar charts show the change from 2019 to 2023 in the proportion of men and women across major STEM fields and the distribution of race/ethnicity within those groups. While slight shifts are visible between the two years, both charts reflect the continued dominance of male and White representation across all fields. 
 
-These two barplots show how the proportion of men and women in major STEM fields and the representation within the broad race/ethnicity categories has changed from 2019 to 2023.  While slight shifts can be seen between the two barcharts, the graph shows the continued dominance of male representation as well as white racial dominance in these fields.  
 
 ```{r}
 #| echo: false
 #| fig-alt: "Two barplots stacked on top of each other representing the year 2019 and then the year 2023. The plots outline the proportion of distinct race/ethnicities of employed scientists and engineers in generalized fields of study (Engineering, Computer and Mathematical Sciences, Physical and Related Sciences, Social and Related Sciences, Science & Engineering Related Fields, Non-science & Engineering Fields, and finally Biological, Agricultural, and Environmental Life Sciences). The barplots show bars comparing proportion of men and women represented in each field with the stacked proportions showing the distribution of each race/ethnicity withing the groups of women and men in each field."
+#| fig-cap: "2019 vs. 2023 proportion of employed scientists and engineers by sex, race/ethnicity, and major field. Source: National Science Foundation, National Center for Science and Engineering Statistics (nsf22310-tab001-005; nsf25322-tab001-005)."
 
 knitr::include_graphics("data-viz/barplot_2023_2019malefemale.png")
 ```
 
-When one begins to look at the history of science deeper and recognize the advancements that have come as women entered the arena of science,  it becomes clear that science advances dramatically with the incorporation of diverse backgrounds and perspectives.  These charts showcase how we must still work to create diverse scientific arenas to continue to foster greater scientific exploration, advancement and equity for all beings and spaces.
+When one begins to look deeper at the history of science and recognize the advancements that have come as women entered the arena of science, it becomes clear that science advances dramatically with the incorporation of diverse backgrounds and perspectives. These charts showcase how we must still work to create diverse scientific arenas to foster greater exploration, advancement, and equity for all.
 
 ```{r}
 #| include: false 
