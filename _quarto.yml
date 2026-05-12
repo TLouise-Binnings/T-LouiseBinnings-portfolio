@@ -10,7 +10,7 @@ website:
         text: "Home"
       - href: about.qmd
         text: "About Me"
-      - href: RDataProject.qmd
+      - href: RDataProject-data/RDataProject.qmd
         text: "Spring 2026 Project"
 
 format:
