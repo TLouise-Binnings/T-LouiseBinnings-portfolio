@@ -85,6 +85,7 @@ When one begins to look deeper at the history of science and recognize the advan
 ```{r}
 #| label: read-in-and-clean-data
 #| include: false
+#| eval: false
 #single code chuck data
 
 tbl2019_stemfields_clean <- read_excel("data-raw/nsf22310-tab001-005.xlsx", 
@@ -152,6 +153,7 @@ tbl2019_stemfields_clean <- read_excel("data-raw/nsf22310-tab001-005.xlsx",
 ```{r}
 #| label: write-clean-2019-data-to-folder
 #| include: false
+#| eval: false
 
 write_csv(tbl2019_stemfields_clean, file = "data-clean/tbl2019_stemfields_clean.csv")
 ```
@@ -159,6 +161,7 @@ write_csv(tbl2019_stemfields_clean, file = "data-clean/tbl2019_stemfields_clean.
 ```{r}
 #| label: single-code-chunk-clean-data-2023
 #| include: false
+#| eval: false
 
 tbl2023_stemfields_clean <- read_excel("data-raw/nsf25322-tab001-005.xlsx", 
                                  skip = 15, 
@@ -226,6 +229,7 @@ tbl2023_stemfields_clean <- read_excel("data-raw/nsf25322-tab001-005.xlsx",
 ```{r}
 #| label: write-clean-2023-data-to-folder
 #| include: false
+#| eval: false
 
 write_csv(tbl2023_stemfields_clean, file = "data-clean/tbl2023_stemfields_clean.csv")
 ```
