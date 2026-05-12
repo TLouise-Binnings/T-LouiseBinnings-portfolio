@@ -69,18 +69,13 @@ knitr::include_graphics("data-viz/barplot_2023_2019malefemale.png")
 
 When one begins to look deeper at the history of science and recognize the advancements that have come as women entered the arena of science, it becomes clear that science advances dramatically with the incorporation of diverse backgrounds and perspectives. These charts showcase how we must still work to create diverse scientific arenas to foster greater exploration, advancement, and equity for all.
 
-```{r}
-#| include: false 
+<!-- #Questions to investigate:  -->
 
-#Questions to investigate: 
+<!-- #How do the number of men and women in major STEM fields (BIO, COMPUTER SCI, PHYSICAL, SOCIAL, ENGINEER, etc.) compare to one another? -->
 
-#How do the number of men and women in major STEM fields (BIO, COMPUTER SCI, PHYSICAL, SOCIAL, ENGINEER, etc.) compare to one another?
+<!-- #How do the different race categories compare to one another? -->
 
-#How do the different race categories compare to one another?
-
-#Have there been any shifts in those proportions between 2019 and 2023?
-```
-
+<!-- #Have there been any shifts in those proportions between 2019 and 2023? -->
 
 ```{r}
 #| label: read-in-and-clean-data
@@ -239,6 +234,7 @@ write_csv(tbl2023_stemfields_clean, file = "data-clean/tbl2023_stemfields_clean.
 ```{r}
 #| label: circular-column-chart-2023
 #| include: false
+#| eval:false
 
 tbl2023_stemfields_clean |> 
   filter(!is.na(count)) |>
@@ -283,6 +279,7 @@ ggsave("data-viz/circlplot_2023malefemale.png", width = 18, height = 8, units = 
 ```{r}
 #| label: 2019-2023-bind-tables
 #| include: false
+#| eval: false
 
 tbl2019_2023_stemfields_clean <- bind_rows(tbl2019_stemfields_clean, tbl2023_stemfields_clean)
 
@@ -292,6 +289,7 @@ tbl2019_2023_stemfields_clean <- bind_rows(tbl2019_stemfields_clean, tbl2023_ste
 ```{r}
 #| label: 2019-2023-barplot-comparison
 #| include: false
+#| eval: false
 
 
 tbl2019_2023_stemfields_clean |> 
